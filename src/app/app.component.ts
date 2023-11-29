@@ -39,4 +39,14 @@ export class AppComponent {
       this.refreshNotes();
     })
   }
+
+  updateNotes(id:any) {
+    var updateNotes=(<HTMLInputElement>document.getElementById("updateNotes")).value;
+    var formData=new FormData();
+    formData.append("updateNotes", updateNotes);
+    this.http.put(this.APIUrl+'UpdateNotes?id='+id, formData).subscribe(data=>{
+      alert(data);
+      this.refreshNotes();
+    })
+  }
 }

@@ -2,10 +2,17 @@
 
 <input id="newNotes">
 <button (click)="addNotes()">Add Notes</button>
+<p>
+  Update note here:
+  <input id="updateNotes">
+</p>
 
   <ul *ngFor="let note of notes" class="task-container">
     <li>
-      <p class="task-item">{{note.description}}<button class="task-item" (click)="deleteNotes(note.id)">Delete Notes</button></p>
+      <p class="task-item">{{note.description}}
+        <button class="task-item" (click)="deleteNotes(note.id)">Delete Notes</button>
+        <button class="task-item" (click)="updateNotes(note.id)">Update Note</button>
+      </p>
     </li>
   </ul>
 
