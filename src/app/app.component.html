@@ -1,19 +1,23 @@
-<h1 class="text-xl">To Do App</h1>
+<h1 class="text-3xl">To Do App</h1>
 
-<input class="rounded border-solid border-2 border-black" id="newNotes">
-<button class="rounded border-solid border-2 border-black bg-green-400 hover:bg-green-500" (click)="addNotes()">Add Notes</button>
-<p class="ms-2">
-  Update note here:
-  <input class="rounded border-solid border-2 border-black" id="updateNotes">
-</p>
+<div class="m-2">
+  <input class="rounded border-solid border-2 border-black" id="newNotes">
+  <button class="rounded border-solid border-2 border-black bg-green-400 hover:bg-green-500" (click)="addNotes()">Add Notes</button>
+</div>
 
-<ul class="list-inside list-disc ms-2 my-1" *ngFor="let note of notes">
+
+<ul class="w-96 list-inside list-disc ms-20 my-1" *ngFor="let note of notes">
   <li class="task-item grid grid-cols-3">
     <p>{{note.description}}</p>
     <button class="rounded border-solid border-2 border-black bg-red-600 hover:bg-red-700" (click)="deleteNotes(note.id)">Delete Notes</button>
     <button class="rounded border-solid border-2 border-black bg-cyan-500 hover:bg-cyan-600" (click)="updateNotes(note.id)">Update Note</button>
   </li>
 </ul>
+
+<p class="ms-2">
+  Update note here:
+  <input class="rounded border-solid border-2 border-black" id="updateNotes">
+</p>
     
     
 
