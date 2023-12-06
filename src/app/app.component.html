@@ -6,7 +6,7 @@
 </div>
 
 
-<ul class="w-96 list-inside list-disc ms-20 my-1" *ngFor="let note of notes">
+<ul class="w-96 list-inside ms-4 my-1" *ngFor="let note of notes">
   <li class="task-item grid grid-cols-3">
     <p>{{note.description}}</p>
     <button class="rounded border-solid border-2 border-black bg-red-600 hover:bg-red-700" (click)="deleteNotes(note.id)">Delete Notes</button>
